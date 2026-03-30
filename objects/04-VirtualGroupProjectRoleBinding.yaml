@@ -1,0 +1,10 @@
+apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
+kind: VirtualGroupProjectRoleBinding
+metadata:
+  name: projectpolicy-${USER_NAME}
+  namespace: ${NAMESPACE}
+spec:
+  projectRoleRef:
+    name: custom-role-${PROJECT_ROLE_NAME}
+  virtualGroupRef:
+    name: ${USER_NAME}-user

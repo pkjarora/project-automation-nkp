@@ -1,0 +1,19 @@
+
+apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
+kind: Project
+metadata:
+  annotations:
+    kommander.mesosphere.io/description: ""
+    kommander.mesosphere.io/display-name: ${NAMESPACE}
+  finalizers:
+  - kommander.mesosphere.io/projectkustomization
+  - workspaces.kommander.mesosphere.io/project
+  name: ${NAMESPACE}
+  namespace: ${WORKSPACE}
+spec:
+  namespaceName: ${NAMESPACE}
+  placement:
+    clusters:
+    - name: ${CLUSTER}
+  workspaceRef:
+    name: ${WORKSPACE}

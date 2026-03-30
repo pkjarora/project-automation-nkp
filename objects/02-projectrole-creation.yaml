@@ -1,0 +1,51 @@
+apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
+kind: ProjectRole
+metadata:
+  annotations:
+    kommander.mesosphere.io/description: ""
+    kommander.mesosphere.io/display-name: ${PROJECT_ROLE_NAME}
+  name: ${PROJECT_ROLE_NAME}
+  namespace: ${NAMESPACE}
+spec:
+  rules:
+  - apiGroups:
+    - '*'
+    resources:
+    - certificatesigningrequests
+    - apps
+    - componentstatuses
+    - configmaps
+    - controllerrevisions
+    - cronjobs
+    - daemonsets
+    - deployments
+    - endpoints
+    - events
+    - horizontalpodautoscalers
+    - ingresses
+    - jobs
+    - limitranges
+    - networkpolicies
+    - nodes
+    - persistentvolumeclaims
+    - persistentvolumes
+    - pipelines
+    - poddisruptionbudgets
+    - podsecuritypolicies
+    - pods
+    - projects
+    - replicasets
+    - replicationcontrollers
+    - resourcequotas
+    - rolebindings
+    - roles
+    - secrets
+    - serviceaccounts
+    - services
+    - statefulsets
+    - storageclasses
+    - instances
+    - operators
+    - operatorversions
+    verbs:
+    - '*'
